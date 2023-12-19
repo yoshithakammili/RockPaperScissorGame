@@ -1,0 +1,271 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  background-color: #89C15E;
+}
+
+.topview {
+  flex-direction: row;
+  border: dotted;
+  border-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 62px 81px;
+  width: 800px;
+  height: 158px;
+  flex-shrink: 0;
+  align-items: center;
+
+}
+
+.btn-holder {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.gamename {
+
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-align: left;
+  margin-left: 18px;
+
+}
+
+.computerscore-div {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: none;
+
+}
+
+.scoretitle {
+  color: #656565;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.7px;
+}
+
+/* .down-arrow { 
+    width: 0;  
+    height: 0;  
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+      
+    border-top: 50px solid green; 
+       margin: 2rem; 
+   
+} */
+
+.circle-container {
+  width: 300px;
+  /* Adjust the width and height as needed */
+  height: 300px;
+}
+
+.circle {
+
+  width: 50px;
+  /* Diameter of the circle */
+  height: 50px;
+  border-radius: 50%;
+  /* Makes the div a circle */
+  background-color: #3498db;
+  /* Color of the circle */
+  position: absolute;
+}
+
+#circle1 {
+  top: 0;
+  left: 50%;
+  /* Adjust left position for the first circle */
+  transform: translateX(-50%);
+}
+
+#circle2 {
+  bottom: 0;
+  left: 0;
+}
+
+#circle3 {
+  bottom: 0;
+  right: 0;
+}
+
+.bottomView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50%;
+}
+
+/* .Background-image, .Overlay-image{
+    position:absolute;
+}
+.Overlay-image{
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* #Ellipse{
+fill: rgba(255, 255, 255, 0.00);
+stroke-width: 16px;
+stroke: #BD00FF;
+width: 100%;
+display: block;
+filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35))
+
+} */
+.Background-image {
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 350px;
+  background: rgba(46, 154, 37, 0.39);
+  box-shadow: 0px 1px 62px 0px rgba(0, 0, 0, 0.13);
+}
+
+.game-container {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+
+.choice {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.inner-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 55px;
+}
+
+#rock {
+  top: 50px;
+  left: 100px;
+}
+
+#paper {
+  top: 300px;
+  left: 300px;
+}
+
+#scissors {
+  top: 50px;
+  left: 500px;
+}
+
+#lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  /* Set the same width as the canvas in CSS */
+  height: 420px;
+  /* Set the same height as the canvas in CSS */
+}
+
+#openDialogBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rulesdialog {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  width: 300px;
+  transform: translate(0%, -20%);
+  padding: 20px;
+  border-radius: 13px;
+  border: 7px solid #FFF;
+  background: #004429;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rulesdialog_content {
+  text-align: center;
+  color: #FFF;
+}
+
+.rulesdialog_content_inner {
+  text-align: start;
+  color: #FFF;
+  color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#playAgainButton {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.game_status {
+  width: 600px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userselected, .computerselected {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top view to display game name, user score and computer score -->
+  <div class="topview">
+    <p class="gamename">
+      ROCK <br>PAPER <br>SCISSORS
+    </p>
+    <div class="computerscore-div">
+      <p class="scoretitle"> COMPUTER <br>SCORE</p>
+      <p id="csvalue">0</p>
+    </div>
+    <div class="computerscore-div">
+      <p class="scoretitle"> YOUR <br>SCORE</p>
+      <p id="yourvalue">0</p>
+    </div>
+  </div> 
+
+  <!-- Game container user will pick one and computer will pick another refer java scrpit for computer pick  -->
+  <div class="game-container" id="gamecontainerid">
+    <canvas id="lines"></canvas>
+    <div class="choice" id="rock">
+      <img src="images/rock_bg.svg" alt="Rock">
+      <img src="images/rock.png" alt="" class="inner-image" />
+    </div>
+    <div class="choice" id="paper">
+      <img src="images/paper_bg.svg" alt="Paper">
+      <img src="images/paper.png" alt="" class="inner-image" />
+
+    </div>
+    <div class="choice" id="scissors">
+      <img src="images/sissor_bg.svg" alt="Scissors">
+      <img src="images/sissor.png" alt="" class="inner-image" />
+
+    </div>
+  </div>
+
+
+  <!-- Game result status -->
+
+  <div class="game_status" id="gamestatusid">
+
+    <div class="userselected" id="user_selected_id">
+      <img src="images/rock_bg.svg" id="user_selected_bg_id">
+      <img src="images/rock.png" class="inner-image" id="user_selected_image_id" />
+    </div>
+
+
+    <div>
+      <p id="you_win_p">You win</p>
+      <p id="against_pc_p">AGAINST PC</p>
+      <button id="playAgainButton" onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+
+
+    <div class="computerselected" id="computer_selected_id">
+      <img src="images/paper_bg.svg" id="computer_selected_bg_id">
+      <img src="images/paper.png" class="inner-image" id="computer_selected_image_id" />
+
+    </div>
+  </div>
+
+
+  <!-- Rules button and dialog -->
+  <button id="openDialogBtn" onclick="openDialog()">Rules</button>
+
+  <div id="customDialog" class="rulesdialog">
+    <div class="rulesdialog_content">
+      <button class="close" onclick="closeDialog()">&times;</button>
+      <h2>Game Rules</h2>
+      <div class="rulesdialog_content_inner">
+        <ul>
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+          <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+            scissors.”</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>If both players lay down the same hand, each player lays down another hand</li>
+          <!-- Add more items as needed -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script defer src="script.js"></script>
+</body>
+
+</html>
