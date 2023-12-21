@@ -15,11 +15,11 @@
     </p>
     <div class="computerscore-div">
       <p class="scoretitle"> COMPUTER <br>SCORE</p>
-      <p id="csvalue">0</p>
+      <div id="csvalue">0</div>
     </div>
     <div class="computerscore-div">
       <p class="scoretitle"> YOUR <br>SCORE</p>
-      <p id="yourvalue">0</p>
+      <div id="yourvalue">0</div>
     </div>
   </div> 
 
@@ -50,6 +50,8 @@
     <!-- <div class="userselected" id="user_selected_id">
       <img src="images/rock_full_image.png" id="user_selected_image_id">
     </div> -->
+    <div class="pc_picked">
+      <p class="picked">YOU PICKED</p>
 
     <div class="userselected" id="user_selected_id">
       <div id="user_circleId">
@@ -57,11 +59,14 @@
       <div class="circle circle2"></div>
       <div class="circle circle3"></div>
   </div>
+  <div id="user_selected_image_div_id">
   <img src="images/rock_full_image.png" id="user_selected_image_id">
+</div>
   </div>
+    </div>
 
 
-    <div>
+    <div class="text_items">
       <p id="you_win_p">You win</p>
       <p id="against_pc_p">AGAINST PC</p>
       <button id="playAgainButton" onclick="playAgain()">PLAY AGAIN</button>
@@ -71,13 +76,21 @@
     <!-- <div class="computerselected" id="computer_selected_id">
       <img src="images/paper_full_image.png" id="computer_selected_image_id">
     </div> -->
+    <div class="pc_picked">
+    <p class="picked">PC PICKED</p>
+   
     <div class="computerselected" id="computer_selected_id">
+     
       <div id="computer_circleId">
       <div class="circle circle1"></div>
       <div class="circle circle2"></div>
       <div class="circle circle3"></div>
   </div>
+  <div id="computer_selected_image_div_id">
+    
   <img src="images/paper_full_image.png" id="computer_selected_image_id">
+  </div>
+</div>
   </div>
   </div>
 
@@ -87,10 +100,10 @@
 
   <div id="customDialog" class="rulesdialog">
     <div class="rulesdialog_content">
-      <button class="close" onclick="closeDialog()">&times;</button>
+      <button class="close" onclick="closeDialog()">X</button>
       <h2>Game Rules</h2>
       <div class="rulesdialog_content_inner">
-        <ul>
+        <ul class="list">
           <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
           <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
             scissors.”</li>
@@ -103,7 +116,7 @@
     </div>
   </div>
 
-  <button class="next" onclick="">Next</button>
+  <button class="next" id="nextId" onclick="location.href='/Winner.html'">Next</button>
 
   <script defer src="script.js"></script>
 </body>

@@ -3,6 +3,8 @@ const gameContainer = document.getElementById("gamecontainerid");
 const userCircleId = document.getElementById("user_circleId");
 const computerCircleId = document.getElementById("computer_circleId");
 
+const nextIdBtn = document.getElementById("nextId");
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("lines");
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let userScore = parseInt(localStorage.getItem("userScore")) || 0;
     let computerScore = parseInt(localStorage.getItem("computerScore")) || 0;
 
+
  
 
 
@@ -30,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       gameStatus.style.display = "none";
+      nextIdBtn.style.display = "none";
     }
     catch(err) {
       console.log(err);
@@ -101,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateGameStatus(result, userChoice, computerChoice){
       if (gameStatus.style.display === "none") {
-        gameStatus.style.display = "block";
+        gameStatus.style.display = "flex";
         gameContainer.style.display = "none";
       } 
 
@@ -111,14 +115,22 @@ document.addEventListener("DOMContentLoaded", function () {
         againstPcP.style.display = "none";
         userCircleId.style.display = "none";
         computerCircleId.style.display = "none";
+        nextIdBtn.style.display = "none";
       }
 
       if (result === "YOU WIN") {
         userCircleId.style.display = "block";
+        againstPcP.style.display = "block";
         computerCircleId.style.display = "none";
+        nextIdBtn.style.display = "block";
+
+        
       } else if (result === "YOU LOST") {
+        againstPcP.style.display = "block";
         computerCircleId.style.display = "block";
         userCircleId.style.display = "none";
+        nextIdBtn.style.display = "none";
+
       }
       if(userChoice == "rock")
       {
@@ -221,5 +233,15 @@ document.addEventListener("DOMContentLoaded", function () {
       customDialog.style.display = "none";
     }
   });
+
+
+  function GoBackWithRefresh(event) {
+    sessionStorage.setItem('refreshPage', 'true');
+    history.back();
+   
+}
+
+
+  
 
  

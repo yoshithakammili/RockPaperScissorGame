@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="winner.css">
+</head>
+
+<body>
+
+    <div class="centerdiv">
+
+        <img src="images/Stars.png" alt="stars" class="stars"/>
+        <img src="images/cup.png" alt="cup" class="cups"/>
+
+        <p class="hurry">HURRAY!!</p>
+        <p class="you_won">You Won the game</p>
+
+        <button id="playAgainButton" onclick="location.href='/Gamepage.html'">PLAY AGAIN</button>
+
+        <button id="openDialogBtn" onclick="openDialog()">Rules</button>
+
+  <div id="customDialog" class="rulesdialog">
+    <div class="rulesdialog_content">
+      <button class="close" onclick="closeDialog()">X</button>
+      <h2>Game Rules</h2>
+      <div class="rulesdialog_content_inner">
+        <ul class="list">
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+          <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+            scissors.”</li>''
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>If both players lay down the same hand, each player lays down another hand</li>
+          <!-- Add more items as needed -->
+        </ul>
+      </div>
+    </div>
+  </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>

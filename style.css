@@ -7,10 +7,10 @@ html {
   font-size: 1.2rem;
   background-color: #89C15E;
 }
-
+/* Top view game name, user score computer score*/
 .topview {
-  border: dotted;
-  border-color: white;
+  border-radius: 13px;
+  border: 2px solid #FFF;
   display: flex;
   margin: 62px 81px;
   width: 800px;
@@ -20,12 +20,6 @@ html {
   margin-right: auto;
   align-items: center;
 
-}
-
-.btn-holder {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 }
 
 .gamename {
@@ -53,7 +47,6 @@ html {
 }
 
 .scoretitle {
-  width: 150px;
   color: #656565;
   text-align: center;
   font-family: Roboto;
@@ -63,86 +56,19 @@ html {
 }
 
 #csvalue,#yourvalue{
-  width: 150px;
   font-family: Roboto;
-  font-size: px;
+  font-size: 58px;
   text-align: center;
+  color: #252525;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+
 }
 
-/* .down-arrow { 
-    width: 0;  
-    height: 0;  
-    border-left: 50px solid transparent; 
-    border-right: 50px solid transparent; 
-      
-    border-top: 50px solid green; 
-       margin: 2rem; 
-   
-} */
 
-
-
-/* .circle {
-
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
- 
-  background-color: #3498db;
-  position: absolute;
-}
-
-#circle1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#circle2 {
-  bottom: 0;
-  left: 0;
-}
-
-#circle3 {
-  bottom: 0;
-  right: 0;
-}
-
-.bottomView {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-top: 50%;
-} */
-
-/* .Background-image, .Overlay-image{
-    position:absolute;
-}
-.Overlay-image{
-    top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* #Ellipse{
-fill: rgba(255, 255, 255, 0.00);
-stroke-width: 16px;
-stroke: #BD00FF;
-width: 100%;
-display: block;
-filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35))
-
-} */
-/* .Background-image {
-  width: 350px;
-  height: 350px;
-  flex-shrink: 0;
-  border-radius: 350px;
-  background: rgba(46, 154, 37, 0.39);
-  box-shadow: 0px 1px 62px 0px rgba(0, 0, 0, 0.13);
-} */
-
+/* User need to select option game contaiener  */
 .game-container {
   position: absolute;
   top: 40%;
@@ -254,10 +180,20 @@ line-height: normal;
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  transform: translate(50%, -50%);
+  background-image: url("images/btn_back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: inherit;
 }
 
 #playAgainButton {
@@ -269,15 +205,20 @@ line-height: normal;
 }
 
 .game_status {
-
-  position: absolute;
+  margin-top: 50px;
   display: flex;
-  width: 800px;
-  height: 158px;
+  width: 750px;
   flex-shrink: 0;
-  left: 40%;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
   align-items: center;
+}
+
+.picked{
+  margin-top: -80px;
+  z-index: 2;
+  position: absolute;
 }
 
 .userselected, .computerselected {
@@ -320,13 +261,13 @@ line-height: normal;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #5e9e36;
+  background-color: #44a10b;
 }
 
-#user_selected_image_id{
+#user_selected_image_div_id{
    z-index: 1;
 }
-#computer_selected_image_id{
+#computer_selected_image_div_id{
   z-index: 1;
 }
 
@@ -348,3 +289,69 @@ line-height: 82.187%; /* 17.259px */
 letter-spacing: 2.1px;
   width: 119px;
 } 
+
+
+#you_win_p{
+  color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 39px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 3.9px;
+}
+
+#against_pc_p{
+  color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 25px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 2.5px;
+}
+
+#playAgainButton{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9px;
+background: #FFF;
+color: #6B6B6B;
+width: 174px;
+height: 44px;
+font-family: Roboto;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.5px;
+}
+
+.text_items{
+  align-items: center;
+}
+
+.picked{
+  color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+font-family: Roboto;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.7px;
+}
+
+.list{
+  list-style-type: none;
+}
+
+li::before {content: "\25FC"; color:#FFD600;;
+  display: inline-block; width: 1em;
+   text-align:center;
+  margin-left: -1em}  
+
+ 

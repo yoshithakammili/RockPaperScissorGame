@@ -1,0 +1,163 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  background-color: #89C15E;
+}
+
+.centerdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+ 
+
+  .stars{
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .cups{
+    position: absolute;
+    top: 0;
+    margin-top: 200px;
+  }
+
+  .hurry{
+    position: relative;
+    margin-top: 150px;
+    color: #FFF;
+    display: inline-block;
+text-align: center;
+font-family: Roboto;
+font-size: 3rem;
+font-style: normal;
+font-weight: 600;
+margin: 0;
+padding-top: 90px;
+line-height: normal;
+letter-spacing: 9.1px;
+  }
+  .you_won{
+
+    color: #FFF;  
+text-align: center;
+font-family: Roboto;
+font-size: 41px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 4.1px;
+  }
+
+  #playAgainButton {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #openDialogBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 80px;
+    color: white;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+  
+  
+    font-family: Roboto;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 82.187%; /* 17.259px */
+  letter-spacing: 2.1px;
+    width: 119px;
+  }
+  
+  
+  .rulesdialog {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 300px;
+    transform: translate(0%, -20%);
+    padding: 20px;
+    border-radius: 13px;
+    border: 7px solid #FFF;
+    background: #004429;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rulesdialog_content {
+    text-align: center;
+    color: #FFF;
+  }
+  
+  .rulesdialog_content_inner {
+    text-align: start;
+    color: #FFF;
+    color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+
+  .list{
+    list-style-type: none;
+  
+  }
+
+  li::before {content: "\25FC"; color:#FFD600;;
+    display: inline-block; width: 1em;
+     text-align:center;
+    margin-left: -1em}  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    transform: translate(50%, -50%);
+    background-image: url("images/btn_back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: inherit;
+  }
+  
+  #playAgainButton {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 9px;
+    background: #FFF;
+    color: #6B6B6B;
+font-family: Roboto;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.5px;
+  }
