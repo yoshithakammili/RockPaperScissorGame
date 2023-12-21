@@ -7,6 +7,7 @@
 
 <body>
 
+  <div class="whole_page">
   <!-- Top view to display game name, user score and computer score -->
   <div class="topview">
     <p class="gamename">
@@ -46,10 +47,18 @@
 
   <div class="game_status" id="gamestatusid">
 
+    <!-- <div class="userselected" id="user_selected_id">
+      <img src="images/rock_full_image.png" id="user_selected_image_id">
+    </div> -->
+
     <div class="userselected" id="user_selected_id">
-      <img src="images/rock_bg.svg" id="user_selected_bg_id">
-      <img src="images/rock.png" class="inner-image" id="user_selected_image_id" />
-    </div>
+      <div id="user_circleId">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+  </div>
+  <img src="images/rock_full_image.png" id="user_selected_image_id">
+  </div>
 
 
     <div>
@@ -59,14 +68,20 @@
     </div>
 
 
+    <!-- <div class="computerselected" id="computer_selected_id">
+      <img src="images/paper_full_image.png" id="computer_selected_image_id">
+    </div> -->
     <div class="computerselected" id="computer_selected_id">
-      <img src="images/paper_bg.svg" id="computer_selected_bg_id">
-      <img src="images/paper.png" class="inner-image" id="computer_selected_image_id" />
-
-    </div>
+      <div id="computer_circleId">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+  </div>
+  <img src="images/paper_full_image.png" id="computer_selected_image_id">
+  </div>
   </div>
 
-
+</div>
   <!-- Rules button and dialog -->
   <button id="openDialogBtn" onclick="openDialog()">Rules</button>
 
@@ -88,6 +103,7 @@
     </div>
   </div>
 
+  <button class="next" onclick="">Next</button>
 
   <script defer src="script.js"></script>
 </body>

@@ -9,15 +9,15 @@ html {
 }
 
 .topview {
-  flex-direction: row;
   border: dotted;
   border-color: white;
   display: flex;
-  justify-content: space-between;
   margin: 62px 81px;
   width: 800px;
   height: 158px;
   flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
 
 }
@@ -29,7 +29,7 @@ html {
 }
 
 .gamename {
-
+  margin-right: auto;
   color: #FFF;
   font-family: Roboto;
   font-size: 32px;
@@ -43,22 +43,30 @@ html {
 }
 
 .computerscore-div {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
+  width: 150px;
   background-color: white;
   border-color: none;
-
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  display: inline;
 }
 
 .scoretitle {
+  width: 150px;
   color: #656565;
+  text-align: center;
   font-family: Roboto;
   font-size: 17px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   letter-spacing: 1.7px;
+}
+
+#csvalue,#yourvalue{
+  width: 150px;
+  font-family: Roboto;
+  font-size: px;
+  text-align: center;
 }
 
 /* .down-arrow { 
@@ -72,28 +80,21 @@ html {
    
 } */
 
-.circle-container {
-  width: 300px;
-  /* Adjust the width and height as needed */
-  height: 300px;
-}
 
-.circle {
+
+/* .circle {
 
   width: 50px;
-  /* Diameter of the circle */
   height: 50px;
   border-radius: 50%;
-  /* Makes the div a circle */
+ 
   background-color: #3498db;
-  /* Color of the circle */
   position: absolute;
 }
 
 #circle1 {
   top: 0;
   left: 50%;
-  /* Adjust left position for the first circle */
   transform: translateX(-50%);
 }
 
@@ -113,7 +114,7 @@ html {
   align-items: center;
   position: relative;
   margin-top: 50%;
-}
+} */
 
 /* .Background-image, .Overlay-image{
     position:absolute;
@@ -133,19 +134,20 @@ display: block;
 filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35))
 
 } */
-.Background-image {
+/* .Background-image {
   width: 350px;
   height: 350px;
   flex-shrink: 0;
   border-radius: 350px;
   background: rgba(46, 154, 37, 0.39);
   box-shadow: 0px 1px 62px 0px rgba(0, 0, 0, 0.13);
-}
+} */
 
 .game-container {
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 25%;
+  
 }
 
 .choice {
@@ -203,7 +205,22 @@ filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35))
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 10px;
+  width: 80px;
+  color: white;
+  border: 2px solid #FFF;
+  background: rgba(217, 217, 217, 0.00);
+
+
+  font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: 82.187%; /* 17.259px */
+letter-spacing: 2.1px;
+  width: 119px;
 }
+
 
 .rulesdialog {
   display: none;
@@ -252,12 +269,15 @@ line-height: normal;
 }
 
 .game_status {
-  width: 600px;
+
   position: absolute;
-  top: 40%;
-  left: 30%;
   display: flex;
-  justify-content: space-between;
+  width: 800px;
+  height: 158px;
+  flex-shrink: 0;
+  left: 40%;
+  justify-content: center;
+  align-items: center;
 }
 
 .userselected, .computerselected {
@@ -269,3 +289,62 @@ line-height: normal;
   align-items: center;
 }
 
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 350px;
+  height: 350px;
+  top: 50%; /* Center the circle vertically */
+  left: 50%; /* Center the circle horizontally */
+  transform: translate(-50%, -50%); /* Adjust for both centering */
+  background-color: rgba(46, 154, 37, 0.39);
+
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(29, 168, 43, 0.79);
+}
+
+.circle3 {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5e9e36;
+}
+
+#user_selected_image_id{
+   z-index: 1;
+}
+#computer_selected_image_id{
+  z-index: 1;
+}
+
+.next {
+  position: fixed;
+  bottom: 20px;
+  right: 180px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #FFF;
+  background: rgba(217, 217, 217, 0.00);
+  color: #ffffff;
+padding: 10px;
+font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: 82.187%; /* 17.259px */
+letter-spacing: 2.1px;
+  width: 119px;
+} 

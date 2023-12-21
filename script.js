@@ -1,5 +1,7 @@
 const gameStatus = document.getElementById("gamestatusid");
 const gameContainer = document.getElementById("gamecontainerid");
+const userCircleId = document.getElementById("user_circleId");
+const computerCircleId = document.getElementById("computer_circleId");
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -21,10 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // const userSelected= document.getElementById("user_selected_id");
 
-    const userSelectedBgId = document.getElementById("user_selected_bg_id");
-    const userSelectedImageId = document.getElementById("user_selected_image_id");
-    const computerSelectedBgId = document.getElementById("computer_selected_bg_id");
-    const computerSelectedImageId = document.getElementById("computer_selected_image_id");
+    const userSelectedBgId = document.getElementById("user_selected_image_id");
+    const computerSelectedBgId = document.getElementById("computer_selected_image_id");
     const youWinP = document.getElementById("you_win_p");
     const againstPcP = document.getElementById("against_pc_p");
 
@@ -109,38 +109,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if(result == "TIE UP"){
         againstPcP.style.display = "none";
+        userCircleId.style.display = "none";
+        computerCircleId.style.display = "none";
       }
 
+      if (result === "YOU WIN") {
+        userCircleId.style.display = "block";
+        computerCircleId.style.display = "none";
+      } else if (result === "YOU LOST") {
+        computerCircleId.style.display = "block";
+        userCircleId.style.display = "none";
+      }
       if(userChoice == "rock")
       {
-        userSelectedBgId.src = "images/rock_bg.svg";
-        userSelectedImageId.src = "images/rock.png";
+        userSelectedBgId.src = "images/rock_full_image.png";
       }
       else if(userChoice == "paper")
       {
-        userSelectedBgId.src = "images/paper_bg.svg";
-        userSelectedImageId.src = "images/paper.png";
+        userSelectedBgId.src = "images/paper_full_image.png";
       }
       else 
       {
-        userSelectedBgId.src = "images/sissor_bg.svg";
-        userSelectedImageId.src = "images/sissor.png";
+        userSelectedBgId.src = "images/scissor_full_image.png";
       }
 
       if(computerChoice== "rock")
       {
-        computerSelectedBgId.src = "images/rock_bg.svg";
-        computerSelectedImageId.src = "images/rock.png";
+        computerSelectedBgId.src ="images/rock_full_image.png";
       }
       else if(computerChoice == "paper")
       {
-        computerSelectedBgId.src = "images/paper_bg.svg";
-        computerSelectedImageId.src = "images/paper.png";
+        computerSelectedBgId.src = "images/paper_full_image.png";
       }
       else 
       {
-        computerSelectedBgId.src = "images/sissor_bg.svg";
-        computerSelectedImageId.src = "images/sissor.png";
+        computerSelectedBgId.src = "images/scissor_full_image.png";
       }
       
     }
